@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--CSS Style Sheet-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <meta charset="UTF-8">
+    <title>Time Sheet</title>
+
+</head>
+
+<body>
+    <!-- CSS Grid Start -->
+    <div class="header">
+        <h1>Employee Data Management</h1>
+        <h4>A Comprehensive Directory of Employee Billable Hours</h4>
+    </div>
+    <div class="gridContainer">
+        <div class="card card1">
+            <div class="card-header">
+                Current Employees
+            </div>
+            <table id="currentEmployees">
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Role</th>
+                    <th>Start Date</th>
+                    <th>Months Worked</th>
+                    <th>Monthly Rate ($)</th>
+                    <th>Total Billed ($)</th>
+                </tr>
+            </table>
+        </div>
+        <div class="card card2">
+            <div class="card-header">
+                Add Employee
+            </div>
+            <div id="cardContent">
+                <form>
+                    <p>Employee Name</p>
+                    <input type="text" name="name" id="input-name">
+                    <p>Role</p>
+                    <input type="text" name="role" id="input-role">
+                    <p>Start Date (DD/MM/YY)</p>
+                    <input type="text" name="start" id="input-start">
+                    <p>Monthly Rate</p>
+                    <input type="text" name="rate" id="input-rate">
+                    <div class="subRe">
+                        <input type="submit" value="Search" id="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- CSS Grid End -->
+    </div>
+
+    <!-- Moment -->
+    <script src="https://unpkg.com/moment"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+
+    <!-- External JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>
