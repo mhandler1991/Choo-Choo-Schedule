@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!--CSS Reset-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!--CSS Style Sheet-->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
     <meta charset="UTF-8">
-    <title>Time Sheet</title>
+    <title>Choo Choo Schedule</title>
 
 </head>
 
 <body>
     <!-- CSS Grid Start -->
     <div class="header">
-        <h1>Employee Data Management</h1>
-        <h4>A Comprehensive Directory of Employee Billable Hours</h4>
+        <h1>Choo Choo Schedule</h1>
+        <h4>A comprehensive list of the local Choo Choo Schedule</h4>
     </div>
     <div class="gridContainer">
         <div class="card card1">
@@ -28,29 +30,30 @@
             </div>
             <table id="currentEmployees">
                 <tr>
-                    <th>Employee Name</th>
-                    <th>Role</th>
-                    <th>Start Date</th>
-                    <th>Months Worked</th>
-                    <th>Monthly Rate ($)</th>
-                    <th>Total Billed ($)</th>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Start Time</th>
+                    <th>Frequency (minutes)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
                 </tr>
             </table>
+            <h4>gotta work on updating train time away func on load...</h4>
         </div>
         <div class="card card2">
             <div class="card-header">
-                Add Employee
+                Add Train
             </div>
             <div id="cardContent">
                 <form>
-                    <p>Employee Name</p>
+                    <p>Train Name</p>
                     <input type="text" name="name" id="input-name">
-                    <p>Role</p>
-                    <input type="text" name="role" id="input-role">
-                    <p>Start Date (DD/MM/YY)</p>
-                    <input type="text" name="start" id="input-start">
-                    <p>Monthly Rate</p>
-                    <input type="text" name="rate" id="input-rate">
+                    <p>Destination</p>
+                    <input type="text" name="role" id="input-destination">
+                    <p>First Train Time (HHmm)</p>
+                    <input type="text" name="start" id="input-firsttime">
+                    <p>Frequency (min)</p>
+                    <input type="text" name="rate" id="input-frequency">
                     <div class="subRe">
                         <input type="submit" value="Search" id="submit">
                     </div>
@@ -62,6 +65,7 @@
 
     <!-- Moment -->
     <script src="https://unpkg.com/moment"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.13.0/moment.min.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <!-- Firebase References -->
@@ -71,7 +75,8 @@
     <!-- External JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="app.js"></script>
+    <!-- JS app func -->
+    <script src="assets/js/app.js"></script>
 
 
 
